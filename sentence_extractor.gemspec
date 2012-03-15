@@ -2,10 +2,10 @@
 require File.expand_path('../lib/sentence_extractor/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Sebastian Glazebrook"]
+  gem.authors       = ["Seb Glazebrook"]
   gem.email         = ["me@sebglazebrook.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{This gem takes takes a bunch of text and returns the sentences found based on language specific rules. E.g. start and end delimiters etc.}
+  gem.summary       = %q{Give it some text and it will return an array of sentences.}
   gem.homepage      = ""
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
