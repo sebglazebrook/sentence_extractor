@@ -8,12 +8,26 @@ module SentenceExtractor
     @delimiters = nil
     @first_letter_capitilization = nil
     
-    def initialize( language = "en", text = "Insert some text here. Please!", delimiters = [".", "!","?"], first_letter_capitilization = false)
+    def initialize( language = "en", delimiters = [".", "!","?"], first_letter_capitilization = false)
       @language = language
-      @text = text
       @delimiters = delimiters
       @first_letter_capitilization = first_letter_capitilization
     end
     
-  end
+    def extract_sentences(text = "Insert some text here. Please!")
+      @text = text
+      get_sentences
+    end
+    
+    private
+    # returns an array of sentences
+    def get_sentences
+      sentences = Array.new
+      # go through array of delimiters and break up the strings.
+      @delimiters.each do |delimiter|
+        #@TODO
+      end
+    end
+    
+   end
 end
