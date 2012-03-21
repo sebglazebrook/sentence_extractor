@@ -47,6 +47,8 @@ module SentenceExtractor
         if sentence_end_point
           sentences << remaining_text[0..sentence_end_point]  # add new sentence to array
           remaining_text = remaining_text[sentence_end_point+1..remaining_text.size]  # set the rest of the text to be processed.
+        else
+          match = nil
         end
       end
       sentences
