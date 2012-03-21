@@ -1,6 +1,7 @@
 # SentenceExtractor
 
-TODO: Write a gem description
+This gem takes takes a bunch of text and returns the sentences found based on language specific rules.
+E.g. start and end delimiters etc.
 
 ## Installation
 
@@ -18,7 +19,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+require 'sentence_extractor'
+
+sen_ext = SentenceExtractor::Extractor.new
+
+sentences = sen_ext.extract_sentences("Sentence 1! Sentence 2. Sentence 3?")
 
 ## Contributing
 
