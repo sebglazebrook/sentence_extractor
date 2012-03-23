@@ -15,4 +15,10 @@ describe SentenceExtractor::Extractor do
     sen_exc = SentenceExtractor::Extractor.new
     sen_exc.extract_sentences("Hello?").should eql(["Hello?"])
   end
+  
+  it "Should not find anything" do
+    sen_exc = SentenceExtractor::Extractor.new
+    sen_exc.extract_sentences("Hello").should eql([])
+  end
+  
 end
