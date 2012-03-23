@@ -14,4 +14,5 @@ Gem::Specification.new do |gem|
   gem.name          = "sentence_extractor"
   gem.require_paths = ["lib"]
   gem.version       = SentenceExtractor::VERSION
+  gem.add_development_dependency "rspec", "~> 2.6"
 end
