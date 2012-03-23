@@ -45,7 +45,7 @@ module SentenceExtractor
       while match != nil
         sentence_end_point = remaining_text =~ /#{@reg_exp}/  # check for sentences
         if sentence_end_point
-          sentences << remaining_text[0..sentence_end_point]  # add new sentence to array
+          sentences << remaining_text[0..sentence_end_point].strip  # add new sentence to array
           remaining_text = remaining_text[sentence_end_point+1..remaining_text.size]  # set the rest of the text to be processed.
         else
           match = nil

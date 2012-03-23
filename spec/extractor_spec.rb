@@ -21,4 +21,9 @@ describe SentenceExtractor::Extractor do
     sen_exc.extract_sentences("Hello").should eql([])
   end
   
+  it "Should find three sentences with no leading or trailing spaces" do
+    sen_exc = SentenceExtractor::Extractor.new
+    sen_exc.extract_sentences("Hello. How are you? Good thanks! ").should eql(["Hello.", "How are you?", "Good thanks!"])
+  end
+  
 end
