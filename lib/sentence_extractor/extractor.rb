@@ -54,6 +54,14 @@ module SentenceExtractor
       sentences
     end
     
+    def first_letter_uppercase? sentence
+      if sentence[0..0] == sentence[0..0].upcase
+        return true
+      else
+        return false
+      end
+    end
+    
    end
    
 end
