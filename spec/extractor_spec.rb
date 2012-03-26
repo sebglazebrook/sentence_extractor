@@ -26,10 +26,17 @@ describe SentenceExtractor::Extractor do
     sen_exc.extract_sentences("Hello. How are you? Good thanks! ").should eql(["Hello.", "How are you?", "Good thanks!"])
   end
   
-  it "Should leave in sentences where that don't start with capital letters" do
+  it "Should leave in sentences that don't start with capital letters" do
     sen_exc = SentenceExtractor::Extractor.new(first_letter_capitalization = false)
     sen_exc.extract_sentences("hello. How are you? good thanks! ").should eql(["hello.", "How are you?", "good thanks!"])
   end
+  
+  it "Should remove sentences that don't start with capital letters" do
+    sen_exc = SentenceExtractor::Extractor.new(first_letter_capitalization = true)
+    sen_exc.extract_sentences("hello. How are you? good thanks! ").should eql(["How are you?"])
+  end
+  
+  
   
   
   
